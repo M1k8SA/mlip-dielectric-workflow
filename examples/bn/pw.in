@@ -1,0 +1,51 @@
+&CONTROL
+    calculation='vc-relax'
+    pseudo_dir='./pseudo/'
+    outdir='./scratch/'
+    prefix='B2N2'
+    verbosity='low'
+    tprnfor=.true.
+    tstress=.true.
+    etot_conv_thr=1e-05
+    forc_conv_thr=0.0001
+/
+
+&SYSTEM
+    ibrav=0
+    nat=4
+    ntyp=2
+    occupations='fixed'
+    smearing='fermi-dirac'
+    degauss=0.01
+    ecutwfc=60.0
+/
+
+&ELECTRONS
+    diagonalization='david'
+    mixing_beta=0.7
+    conv_thr=1e-07
+    diago_thr_init=0.0001
+/
+
+&IONS
+/
+
+&CELL
+    cell_dofree='ibrav'
+/
+
+CELL_PARAMETERS (angstrom)
+1.25759489	-2.178257334	-0.0
+1.257628743	2.17827688	-0.0
+-0.0	0.0	8.126793154
+ATOMIC_SPECIES
+B	10.81	B.pbe-n-kjpaw_psl.1.0.0.UPF
+N	14.00674	N.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (crystal)
+B	2.32873e-05	1.16437e-05	-0.0
+B	0.3333258696	0.6666629348	0.5
+N	0.6666710952	0.3333355476	0.5
+N	0.3333797479	0.666689874	0.0
+K_POINTS (automatic)
+10 10 10 1 1 1

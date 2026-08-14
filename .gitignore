@@ -1,0 +1,44 @@
+# Local Python/runtime state
+.venv/
+.tools/
+.uv-cache/
+__pycache__/
+*.py[cod]
+
+# User-supplied models (never commit large model artifacts by default)
+*.pth
+*.pt
+*.pb
+*.onnx
+models/
+
+# Case-local inputs at repository root; reusable examples live in examples/
+/pw.in
+/BORN
+/pseudo/
+/scratch/
+
+# Workflow outputs
+dielectric_work/
+epsil_ion.dat
+calc_epsil_parallel.out
+FORCE_SETS
+FORCE_CONSTANTS
+force_constants.hdf5
+phonopy*.yaml
+supercell*.in
+relaxed_pw.in
+relaxed.xyz
+*.traj
+BFGS.log
+
+# Scheduler/editor noise
+slurm-*.out
+slurm-*.err
+.DS_Store
+.idea/
+.vscode/
+
+# Local task context, not part of the distributable workflow
+/QE-PW_超胞生成与位移_对话记录.md
+/README_介电工作流.md
